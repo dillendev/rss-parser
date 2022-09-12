@@ -1,20 +1,24 @@
-# rss-parser
+# rss-parser (fork)
 
 [![Version][npm-image]][npm-link]
 [![Build Status][build-image]][build-link]
 [![Downloads][downloads-image]][npm-link]
 
-[downloads-image]: https://img.shields.io/npm/dm/rss-parser.svg
-[npm-image]: https://img.shields.io/npm/v/rss-parser.svg
-[npm-link]: https://npmjs.org/package/rss-parser
-[build-image]: https://github.com/rbren/rss-parser/workflows/tests/badge.svg
-[build-link]: https://github.com/rbren/rss-parser/actions
+[downloads-image]: https://img.shields.io/npm/dm/@dillen.dev/rss-parser.svg
+[npm-image]: https://img.shields.io/npm/v/@dillen.dev/rss-parser.svg
+[npm-link]: https://npmjs.org/package/@dillen.dev/rss-parser
+[build-image]: https://github.com/dillendev/rss-parser/workflows/tests/badge.svg
+[build-link]: https://github.com/dillendev/rss-parser/actions
 
 A small library for turning RSS XML feeds into JavaScript objects.
 
+## Fork
+
+This is a fork of [rss-parser](https://github.com/rbren/rss-parser) which doesn't seem to be maintained anymore.
+
 ## Installation
 ```bash
-npm install --save rss-parser
+npm install --save @dillen.dev/rss-parser
 ```
 
 ## Usage
@@ -26,7 +30,7 @@ Both callbacks and Promises are supported.
 Here's an example in NodeJS using Promises with async/await:
 
 ```js
-let Parser = require('rss-parser');
+let Parser = require('@dillen.dev/rss-parser');
 let parser = new Parser();
 
 (async () => {
@@ -45,7 +49,7 @@ let parser = new Parser();
 When using TypeScript, you can set a type to control the custom fields:
 
 ```typescript
-import Parser from 'rss-parser';
+import Parser from '@dillen.dev/rss-parser';
 
 type CustomFeed = {foo: string};
 type CustomItem = {bar: number};
@@ -248,7 +252,7 @@ let parser = new Parser({
 ```
 
 ## Contributing
-Contributions are welcome! If you are adding a feature or fixing a bug, please be sure to add a [test case](https://github.com/bobby-brennan/rss-parser/tree/master/test/input)
+Contributions are welcome! If you are adding a feature or fixing a bug, please be sure to add a [test case](https://github.com/dillendev/rss-parser/tree/master/test/input)
 
 ### Running Tests
 The tests run the RSS parser for several sample RSS feeds in `test/input` and outputs the resulting JSON into `test/output`. If there are any changes to the output files the tests will fail.
